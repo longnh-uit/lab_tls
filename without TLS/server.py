@@ -1,8 +1,9 @@
 import socket
+import sys
 
 HEADER = 64
 PORT = 3000
-SERVER = socket.gethostbyname(socket.gethostname()) # get localhost address
+SERVER = sys.argv[1] # get localhost address
 ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
