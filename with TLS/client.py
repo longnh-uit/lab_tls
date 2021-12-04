@@ -1,13 +1,14 @@
 import socket
 import ssl
 import os
+import sys
 
 PATH = os.path.dirname(__file__)
 HEADER = 64
 PORT = 3000
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
-SERVER = socket.gethostbyname(socket.gethostname())
+SERVER = sys.argv[1]
 ADDR = (SERVER, PORT)
 
 context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
