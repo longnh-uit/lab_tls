@@ -12,7 +12,7 @@ FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
 
 context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-context.load_cert_chain(PATH + "/certs/certificate.crt", PATH + "/certs/privateKey.key")
+context.load_cert_chain(PATH + "./certs/certificate.crt", PATH + "./certs/privateKey.key")
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # create socket
 server.bind(ADDR)
