@@ -12,7 +12,7 @@ SERVER = sys.argv[1]
 ADDR = (SERVER, PORT)
 
 context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
-context.load_verify_locations(PATH + "/certs/certificate.crt")
+context.load_verify_locations(PATH + "./certs/certificate.crt")
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect(ADDR)
