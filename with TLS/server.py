@@ -36,7 +36,6 @@ def start():
     print(f"[LISTENING] Server is listening on {SERVER}")
     conn, addr = ssock.accept()
     handle_client(conn, addr)
-    print(f"[TLS] TLS version: {ssock.version()}")
     conn.close()
     print("[CLOSING] Server is closing...")
 
